@@ -1,0 +1,12 @@
+- name: Setup chrony
+  hosts: test
+  become: true
+  gather_facts: False
+  pre_tasks:
+     - name: 1. Check Python and install if not present
+       raw: test -e /usr/bin/python || ( apt -y update && apt install -y python)
+       changed_when: False
+     - name: 2. Gather facts
+       setup: # aka gather_facts
+  roles:
+     - chrony
