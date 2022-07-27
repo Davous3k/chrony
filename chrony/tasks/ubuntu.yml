@@ -1,3 +1,5 @@
 ---
 - name: Install the require packages in Ubuntu derivatives
   apt: name=chrony state={{ chrony_pkg_state }}
+
+# again old syntax, look up ansible apt module a opis to z toho
