@@ -10,7 +10,7 @@ This role is developed with Ansible 2.9.6 and tesed on Ubuntu 20.04 LTS.
 | `chrony_service_state` | No | `started` | Set service state, started, enabled or disabled |
 | `chrony_service_enabled` | No | `yes` | Set enable service on system boot.                   |
 | `chrony_config_server` | No | `["0.cz.pool.ntp.org","1.cz.pool.ntp.org","2.cz.pool.ntp.org", "3.cz.pool.ntp.org"]` | A list of NTP servers to use. |
-| `chrony_config_logdir` | No | `/var/log/chrony` | Set defualt config location. |
+| `chrony_config_logdir` | No | `/var/log/chrony` | Set defualt log location. |
 | `chrony_config_extra_options` | No | `{}` | A dict of extra config options. |
 
 ## Requirements
