@@ -16,11 +16,7 @@
   notify:
     - restart chrony
     
-- name: chrony | 4. Just force systemd to reread configs
-  ansible.builtin.systemd:
-    daemon_reload: yes
-
-- name: chrony | 5. start and enable chrony service
+- name: chrony | 4. start and enable chrony service and daemon reload
   ansible.builtin.service:
     name: "{{ chrony_service_name }}"
     state: "{{ chrony_service_state }}"
