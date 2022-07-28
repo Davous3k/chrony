@@ -1,0 +1,27 @@
+---
+- name: chrony | 1. Install chrony
+  ansible.builtin.apt:
+    name: chrony
+    state: "{{ chrony_pkg_state }}"
+
+- name: chrony | 2. Create custom chrony directory
+  ansible.builtin.file:
+    path: "{{ chrony_config_location }}"
+    state: directory
+
+- name: chrony | 3. Copy the chrony.conf template file
+  ansible.builtin.template:
+    src: chrony.conf.j2
+    dest: "{{ chrony_config_location }}"
+  notify:
+    - restart chrony
+    
+- name: chrony | 4. Just force systemd to reread configs
+  ansible.builtin.systemd:
+    daemon_reload: yes
+
+- name: chrony | 5. start and enable chrony service
+  ansible.builtin.service:
+    name: "{{ chrony_service_name }}"
+    state: "{{ chrony_service_state }}"
+    enabled: "{{ chrony_service_enabled }}"

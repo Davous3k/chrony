@@ -1,5 +1,0 @@
----
-- name: restart chrony
-  service: name={{ chrony_service_name }} state=restarted
-
-#use newer style of ansible syntax - https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_module.html#examples

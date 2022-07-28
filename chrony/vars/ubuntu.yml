@@ -1,8 +1,0 @@
----
-chrony_service_name: chrony
-chrony_config_location: /etc/chrony/chrony.conf
-chrony_config_driftfile: /var/lib/chrony/chrony.drift
-chrony_config_keyfile: /etc/chrony/chrony.keys
-
-
-# proc myslis, ze je dobry/neni dobry to mit pojmenovane vse s prefixem "chrony"?
