@@ -9,5 +9,4 @@
      - name: 2. Gather facts
        setup: # aka gather_facts
   roles:
-     - ansible-chrony #naming scheme - in large repo, use sw prefix when desgning a role for software "sw-chrony" or in standalone 
-              # role like this one, use "ansible-chrony" to let the user know that this is in a fact an Ansible role
+     - ansible-chrony
