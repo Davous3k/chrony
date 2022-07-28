@@ -11,7 +11,7 @@
   notify:
     - restart chrony
     
-- name: chrony | 3. start and enable chrony service and daemon reload
+- name: chrony | 3. start and enable chrony service
   ansible.builtin.service:
     name: "{{ chrony_service_name }}"
     state: "{{ chrony_service_state }}"

@@ -1,6 +1,6 @@
 Ansible role for chrony setup.
 
-This role is developed with Ansible 2.9.6 and tesed on Ubuntu 20.04 LTS.
+This role is developed with Ansible 2.9.6 and tested on Ubuntu 20.04 LTS.
 
 ## Role Variables
 
