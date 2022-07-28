@@ -4,19 +4,14 @@
     name: chrony
     state: "{{ chrony_pkg_state }}"
 
-- name: chrony | 2. Create custom chrony directory
-  ansible.builtin.file:
-    path: "{{ chrony_config_location }}"
-    state: directory
-
-- name: chrony | 3. Copy the chrony.conf template file
+- name: chrony | 2. Copy the chrony.conf template file
   ansible.builtin.template:
     src: chrony.conf.j2
     dest: "{{ chrony_config_location }}"
   notify:
     - restart chrony
     
-- name: chrony | 4. start and enable chrony service and daemon reload
+- name: chrony | 3. start and enable chrony service and daemon reload
   ansible.builtin.service:
     name: "{{ chrony_service_name }}"
     state: "{{ chrony_service_state }}"
